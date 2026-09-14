@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>郑姐海鲜海肠捞饭美食馆 · 全案运营方案</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",Arial,sans-serif;background:#f5f5f0;color:#1a1a2e;overflow-x:hidden}
+.top-bar{background:linear-gradient(135deg,#1a365d,#2d4a7a);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:10px}
+.top-bar .name{font-size:16px;font-weight:700;flex:1}
+.top-bar .badge{background:rgba(255,255,255,0.15);padding:3px 12px;border-radius:20px;font-size:11px}
+.container{max-width:480px;margin:0 auto;padding:20px 16px 60px}
+.hero-card{background:linear-gradient(135deg,#1a365d,#2d4a7a);border-radius:20px;padding:24px 20px;color:#fff;margin-bottom:20px;position:relative;overflow:hidden}
+.hero-card::after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.05),transparent 70%);bottom:-80px;right:-80px}
+.hero-card .tag{background:rgba(255,255,255,0.15);display:inline-block;padding:3px 14px;border-radius:20px;font-size:11px;margin-bottom:10px}
+.hero-card h1{font-size:22px;font-weight:800;margin-bottom:4px;line-height:1.3}
+.hero-card .sub{font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:14px}
+.hero-card .info-row{display:flex;gap:10px;flex-wrap:wrap}
+.hero-card .info-item{background:rgba(255,255,255,0.08);border-radius:10px;padding:8px 14px;font-size:12px;min-width:70px;text-align:center}
+.hero-card .info-item .num{font-weight:700;font-size:16px}
+.hero-card .info-item .lbl{color:rgba(255,255,255,0.5);font-size:10px;margin-top:2px}
+
+.section{margin-bottom:20px}
+.section-title{font-size:16px;font-weight:800;color:#1a365d;display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.section-title .num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#1a365d;color:#fff;font-size:12px;font-weight:700;flex-shrink:0}
+
+.card{background:#fff;border-radius:14px;padding:16px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.card h3{font-size:15px;font-weight:700;color:#1a365d;margin-bottom:6px}
+.card p{font-size:14px;color:#4a5568;line-height:1.7}
+.card .highlight{background:#fefcbf;padding:1px 6px;border-radius:4px;font-weight:500}
+.card .tag-blue{display:inline-block;background:#ebf4ff;color:#2b6cb0;font-size:12px;padding:2px 10px;border-radius:10px;margin:2px}
+.card ul{padding-left:18px;margin:6px 0}
+.card ul li{font-size:14px;color:#4a5568;line-height:1.7;margin-bottom:4px}
+
+.strategy-box{background:#f0faf0;border-left:4px solid #38a169;border-radius:0 14px 14px 0;padding:14px 16px;margin:10px 0}
+.strategy-box .label{color:#276749;font-size:12px;font-weight:700;margin-bottom:4px}
+.strategy-box p{font-size:14px;color:#2f855a;line-height:1.6}
+
+.warning-box{background:#fff5f5;border-left:4px solid #e53e3e;border-radius:0 14px 14px 0;padding:14px 16px;margin:10px 0}
+.warning-box .label{color:#c53030;font-size:12px;font-weight:700;margin-bottom:4px}
+.warning-box p{font-size:14px;color:#742a2a;line-height:1.6}
+
+.tip-box{background:#fffbeb;border-left:4px solid #d69e2e;border-radius:0 14px 14px 0;padding:14px 16px;margin:10px 0}
+.tip-box .label{color:#b7791f;font-size:12px;font-weight:700;margin-bottom:4px}
+.tip-box p{font-size:14px;color:#78350f;line-height:1.6}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.price-tag{display:inline-block;background:#1a365d;color:#fff;font-size:12px;font-weight:600;padding:2px 10px;border-radius:8px}
+
+.flow-steps{display:flex;gap:6px;flex-wrap:wrap}
+.flow-step{background:#ebf4ff;border-radius:10px;padding:8px 12px;font-size:12px;color:#2b6cb0;text-align:center;flex:1;min-width:60px}
+.flow-step .fn{font-weight:700;display:block;font-size:13px}
+
+.table-data{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.table-data th{background:#1a365d;color:#fff;padding:8px 10px;text-align:left;font-weight:600}
+.table-data td{padding:7px 10px;border-bottom:1px solid #e2e8f0;color:#4a5568}
+.table-data tr:nth-child(even) td{background:#f7fafc}
+
+.footer{text-align:center;padding:24px 20px;border-top:1px solid #e2e8f0;margin-top:20px}
+.footer .sign{font-size:14px;color:#718096;margin-bottom:4px}
+.footer .date{font-size:12px;color:#a0aec0}
+
+@media(max-width:420px){
+.two-col{grid-template-columns:1fr}
+.hero-card{padding:20px 16px}
+.hero-card h1{font-size:20px}
+}
+</style>
+</head>
+<body>
+<div class="top-bar"><span class="name">🦐 郑姐海鲜海肠捞饭美食馆</span><span class="badge">全案运营方案</span></div>
+<div class="container">
+
+<!-- Hero -->
+<div class="hero-card">
+<div class="tag">📍 北塘商圈 · 新店未营业</div>
+<h1>郑姐海鲜海肠捞饭<br>全案运营方案</h1>
+<div class="sub">40㎡特色海鲜小店 · 单品爆款 · 高翻台模式</div>
+<div class="info-row">
+<div class="info-item"><div class="num">40㎡</div><div class="lbl">面积</div></div>
+<div class="info-item"><div class="num">北塘</div><div class="lbl">位置</div></div>
+<div class="info-item"><div class="num">海鲜</div><div class="lbl">品类</div></div>
+<div class="info-item"><div class="num">新店</div><div class="lbl">状态</div></div>
+</div>
+</div>
+
+<!-- 策略总纲 -->
+<div class="section">
+<div class="section-title"><span class="num">⭐</span>策略总纲</div>
+<div class="card">
+<h3>40㎡小店的打法和定位</h3>
+<p>北塘商圈的餐饮竞争以小吃快餐为主，郑姐海鲜以「海肠捞饭」这一差异化爆品切入，走<strong class="highlight">"小面积·高坪效·单品极致"</strong>路线。</p>
+<div class="strategy-box">
+<div class="label">🎯 核心策略</div>
+<p>单品海肠捞饭打爆口碑 → 带动海鲜小食复购 → 外卖+堂食双渠道覆盖</p>
+</div>
+<div class="two-col" style="margin-top:10px">
+<div class="card" style="margin:0"><h3>👍 优势</h3><p>海肠捞饭差异化强、客单价高（58-68元）、翻台快</p></div>
+<div class="card" style="margin:0"><h3>⚠️ 挑战</h3><p>40㎡空间有限、新店无客源基础、海鲜成本管控</p></div>
+</div>
+</div>
+</div>
+
+<!-- 第1章：蓄水 -->
+<div class="section">
+<div class="section-title"><span class="num">1</span>开业前蓄水</div>
+<div class="card">
+<h3>提前2-3周开始蓄客</h3>
+<ul>
+<li><strong>门头围挡二维码</strong>：围挡上放群二维码+大众点评收藏二维码，扫码入群送「开业5元券」</li>
+<li><strong>北塘周边地推</strong>：针对周边小区、写字楼派发开业传单，凭传单到店送小菜</li>
+<li><strong>抖音短视频预热</strong>：拍摄海肠捞饭制作过程，突出"鲜活海肠+现场制作"，定位北塘</li>
+<li><strong>大众点评爬坡</strong>：先上团购套餐，积累初始评价（5-10条真实体验评价）</li>
+</ul>
+</div>
+</div>
+
+<!-- 第2章：预热 -->
+<div class="section">
+<div class="section-title"><span class="num">2</span>开业预热</div>
+<div class="card">
+<h3>开业前7天集中造势</h3>
+<div class="two-col">
+<div><div class="flow-step"><span class="fn">D-7</span>围挡上墙</div></div>
+<div><div class="flow-step"><span class="fn">D-5</span>抖音第一波</div></div>
+<div><div class="flow-step"><span class="fn">D-3</span>地推发传单</div></div>
+<div><div class="flow-step"><span class="fn">D-1</span>开业倒计时</div></div>
+</div>
+<div class="tip-box">
+<div class="label">💡 对客建议</div>
+<p>抖音拍"海肠鲜活处理全过程"内容——活海肠清洗→切段→爆炒→浇饭，全程无死角展示食材新鲜度，这是最大卖点。</p>
+</div>
+</div>
+</div>
+
+<!-- 第3章：异业联动 -->
+<div class="section">
+<div class="section-title"><span class="num">3</span>异业联动</div>
+<div class="card">
+<h3>北塘商圈周边合作</h3>
+<ul>
+<li><strong>周边奶茶店</strong>：在郑姐消费满58元，送隔壁奶茶店5元券；反之在奶茶店消费送郑姐8折尝鲜券</li>
+<li><strong>北塘附近酒店/民宿</strong>：放代金券在前台，住客凭券到店享9折</li>
+<li><strong>周边企业/办公楼</strong>：北塘附近有不少企业，推"工作餐团订"业务，海肠捞饭套餐外卖配送</li>
+</ul>
+</div>
+</div>
+
+<!-- 第4章：DM单 -->
+<div class="section">
+<div class="section-title"><span class="num">4</span>DM单设计</div>
+<div class="card">
+<h3>传单核心信息</h3>
+<ul>
+<li><strong>正面</strong>：海肠捞饭大图+「北塘人的第一碗海肠捞饭」slogan</li>
+<li><strong>背面</strong>：开业活动+美团收藏打卡指引+二维码</li>
+<li><strong>尺寸</strong>：A6小卡片，方便携带</li>
+<li><strong>话术</strong>：开业期间到店收藏打卡，送「蒜蓉粉丝扇贝」一份</li>
+</ul>
+<div class="warning-box">
+<div class="label">⚠️ 注意</div>
+<p>禁止出现"好评返现"字样，改为"收藏打卡送小菜"</p>
+</div>
+</div>
+</div>
+
+<!-- 第5章：会员体系 -->
+<div class="section">
+<div class="section-title"><span class="num">5</span>会员体系</div>
+<div class="card">
+<h3>轻量级会员方案（适用40㎡小店）</h3>
+<ul>
+<li><strong>首充方案</strong>：充200送30、充500送100（锁定复购）</li>
+<li><strong>积分体系</strong>：消费1元积1分，100分抵5元</li>
+<li><strong>生日礼</strong>：会员生日当天免费送一份海肠捞饭</li>
+<li><strong>美团收银自动管理</strong>：用美团智能版收银系统的会员模块，自动记录消费、推送优惠券</li>
+</ul>
+</div>
+</div>
+
+<!-- 第6章：复购券 -->
+<div class="section">
+<div class="section-title"><span class="num">6</span>复购策略</div>
+<div class="card">
+<h3>让客人来了还想来</h3>
+<ul>
+<li><strong>回头客券</strong>：首次消费后，自动送「下次消费满60减10」券（美团收银自动触发）</li>
+<li><strong>集章卡</strong>：吃满5次送1份海肠捞饭（实体卡，成本低效果好）</li>
+<li><strong>时段券</strong>：工作日午餐时段用券再减5元，拉平淡峰</li>
+<li><strong>新品尝鲜</strong>：每月推一款"隐藏菜单"限定海鲜小食，老客优先品尝</li>
+</ul>
+</div>
+</div>
+
+<!-- 第7章：开业活动 -->
+<div class="section">
+<div class="section-title"><span class="num">7</span>开业活动方案</div>
+<div class="card">
+<h3>开业3天引爆方案</h3>
+<table class="table-data">
+<tr><th>天数</th><th>活动内容</th><th>目标</th></tr>
+<tr><td>第1天</td><td>海肠捞饭买一送一（限前50名）</td><td>排队效应造势</td></tr>
+<tr><td>第2天</td><td>全场8折+收藏打卡送扇贝</td><td>转化评价</td></tr>
+<tr><td>第3天</td><td>消费满68抽奖（100%中奖）</td><td>拉高客单价</td></tr>
+</table>
+<div class="tip-box">
+<div class="label">💡 对客建议</div>
+<p>开业活动不要拉太长，3天集中爆破就够了。关键是第1天的排队效应——有人排队就会有人跟着排，自然流量就来了。</p>
+</div>
+</div>
+</div>
+
+<!-- 第8章：品类策略 -->
+<div class="section">
+<div class="section-title"><span class="num">8</span>品类策略</div>
+<div class="card">
+<h3>菜单结构（40㎡小店精简版）</h3>
+<table class="table-data">
+<tr><th>分类</th><th>菜品</th><th>价格</th><th>定位</th></tr>
+<tr><td>🔥 招牌</td><td>海肠捞饭</td><td>58元</td><td>引流爆品</td></tr>
+<tr><td>🔥 招牌</td><td>海鲜海肠捞饭（加料版）</td><td>78元</td><td>利润款</td></tr>
+<tr><td>🍤 小食</td><td>蒜蓉粉丝扇贝（3个）</td><td>18元</td><td>佐餐</td></tr>
+<tr><td>🍤 小食</td><td>白灼大虾（6只）</td><td>28元</td><td>加购</td></tr>
+<tr><td>🥗 凉菜</td><td>凉拌海带/黄瓜</td><td>8元</td><td>凑单</td></tr>
+<tr><td>🥤 饮品</td><td>酸梅汤/可乐</td><td>5元</td><td>解腻</td></tr>
+</table>
+<div class="strategy-box">
+<div class="label">🎯 定价策略</div>
+<p>海肠捞饭58元作为引流价（略低于市场均价68-78元），用高性价比吸引首批客人。加料版78元赚利润，小食和饮品做连带销售，拉高客单价到65-75元。</p>
+</div>
+</div>
+</div>
+
+<!-- 第9章：大众点评 -->
+<div class="section">
+<div class="section-title"><span class="num">9</span>大众点评运营</div>
+<div class="card">
+<h3>新店爬坡四步走</h3>
+<ul>
+<li><strong>第1步（开业前）</strong>：完善店铺信息（门头照、菜单、地址精确标注）</li>
+<li><strong>第2步（开业1-2周）</strong>：上架开业团购套餐（海肠捞饭单人餐48元，原价58）</li>
+<li><strong>第3步（开业2-4周）</strong>：鼓励真实顾客写评价，目标15-20条，冲刺"北塘美食热门"</li>
+<li><strong>第4步（营业1个月后）</strong>：推收藏打卡活动→"收藏门店+打卡，送饮品"</li>
+</ul>
+</div>
+</div>
+
+<!-- 第10章：抖音运营 -->
+<div class="section">
+<div class="section-title"><span class="num">10</span>抖音运营</div>
+<div class="card">
+<h3>40㎡小店也能玩抖音</h3>
+<ul>
+<li><strong>内容方向</strong>：海肠处理全过程（清洗→切段→爆炒）→ 视觉冲击力强</li>
+<li><strong>投放策略</strong>：定位北塘，投本地流量（5公里范围）</li>
+<li><strong>话题标签</strong>：#天津海肠捞饭 #北塘美食 #郑姐海鲜</li>
+<li><strong>团购上架</strong>：抖音团购同步上架，和大众点评价格一致</li>
+</ul>
+</div>
+</div>
+
+<!-- 第11章：小红书 -->
+<div class="section">
+<div class="section-title"><span class="num">11</span>小红书种草</div>
+<div class="card">
+<h3>吸引年轻食客</h3>
+<ul>
+<li>邀请天津本地探店博主到店体验（置换：免费套餐换一篇笔记）</li>
+<li>主推「海肠捞饭」拍照打卡——摆盘精致、色泽诱人</li>
+<li>标题方向：「北塘这家40㎡小店，海肠捞饭让我连干三碗！」</li>
+</ul>
+</div>
+</div>
+
+<!-- 第12章：收银系统 -->
+<div class="section">
+<div class="section-title"><span class="num">12</span>美团智能版收银</div>
+<div class="card">
+<h3>40㎡小店为什么需要收银系统</h3>
+<div class="two-col">
+<div class="card" style="margin:0;background:#f7fafc">
+<h3>📱 扫码点餐</h3>
+<p>客人扫码自助下单，省去1个点餐人力，40㎡1-2人即可运转</p>
+</div>
+<div class="card" style="margin:0;background:#f7fafc">
+<h3>🔗 团购核销</h3>
+<p>大众点评/抖音团券一键核销，不用切换后台</p>
+</div>
+<div class="card" style="margin:0;background:#f7fafc">
+<h3>🎯 会员营销</h3>
+<p>自动发券、积分管理、消费分析，小店的数字大脑</p>
+</div>
+<div class="card" style="margin:0;background:#f7fafc">
+<h3>📊 经营报表</h3>
+<p>每天卖了多少、什么菜最火、客单价多少，一眼看清</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 第13章：台卡物料 -->
+<div class="section">
+<div class="section-title"><span class="num">13</span>台卡与物料</div>
+<div class="card">
+<h3>每桌必放3样东西</h3>
+<ul>
+<li><strong>台卡①</strong>：收藏打卡指引（大众点评收藏+打卡，送饮品）</li>
+<li><strong>台卡②</strong>：会员充值活动（充200送30）</li>
+<li><strong>台卡③</strong>：微信群二维码（加入粉丝群享每周福利）</li>
+</ul>
+</div>
+</div>
+
+<!-- 第14章：运营节奏 -->
+<div class="section">
+<div class="section-title"><span class="num">14</span>运营节奏</div>
+<div class="card">
+<h3>前3个月时间线</h3>
+<table class="table-data">
+<tr><th>阶段</th><th>时间</th><th>重点任务</th></tr>
+<tr><td>筹备期</td><td>D-21~D-7</td><td>装修收尾、菜单确定、收银系统安装调试、围挡蓄水</td></tr>
+<tr><td>预热期</td><td>D-7~D-1</td><td>抖音预热、地推发传单、试营业邀请亲友体验</td></tr>
+<tr><td>开业爆发</td><td>D1~D3</td><td>买一送一、8折活动、引爆排队</td></tr>
+<tr><td>稳客期</td><td>W2~W4</td><td>爬大众点评评分、建会员体系、优化出餐流程</td></tr>
+<tr><td>成长期</td><td>M2~M3</td><td>开放外卖平台、推复购券、冲刺商圈热门榜</td></tr>
+</table>
+</div>
+</div>
+
+<!-- 第15章：预算 -->
+<div class="section">
+<div class="section-title"><span class="num">15</span>预算分配</div>
+<div class="card">
+<h3>开业首月预算建议（约8000-12000元）</h3>
+<table class="table-data">
+<tr><th>项目</th><th>预算</th><th>说明</th></tr>
+<tr><td>开业活动让利</td><td>3000-5000</td><td>买一送一、折扣等成本</td></tr>
+<tr><td>抖音投放</td><td>1000-2000</td><td>本地推流5公里</td></tr>
+<tr><td>地推物料</td><td>500-1000</td><td>DM单、台卡、围挡</td></tr>
+<tr><td>探店合作</td><td>1000-2000</td><td>1-2位本地博主</td></tr>
+<tr><td>团购让利</td><td>1500-2000</td><td>平台团购折扣成本</td></tr>
+</table>
+</div>
+</div>
+
+<!-- 第16章：营收预估 -->
+<div class="section">
+<div class="section-title"><span class="num">16</span>营收预估</div>
+<div class="card">
+<h3>40㎡小店营收测算</h3>
+<table class="table-data">
+<tr><th>指标</th><th>开业第1月</th><th>第2-3月</th><th>稳定期</th></tr>
+<tr><td>日均堂食单量</td><td>40-60单</td><td>50-70单</td><td>60-80单</td></tr>
+<tr><td>客单价</td><td>55元</td><td>60元</td><td>65元</td></tr>
+<tr><td>日营收</td><td>2200-3300</td><td>3000-4200</td><td>3900-5200</td></tr>
+<tr><td>月营收</td><td>6.6-9.9万</td><td>9-12.6万</td><td>11.7-15.6万</td></tr>
+</table>
+<div class="tip-box">
+<div class="label">💡 对客建议</div>
+<p>以上为堂食预估。外卖上线后（建议营业1个月后开外卖），预计可增加30-40%营收。40㎡小店做到月营收10万+就是优秀水平。</p>
+</div>
+</div>
+</div>
+
+<!-- 第17章：竞品 -->
+<div class="section">
+<div class="section-title"><span class="num">17</span>竞品分析</div>
+<div class="card">
+<h3>北塘商圈海鲜/捞饭类竞品</h3>
+<ul>
+<li>北塘商圈目前<strong>没有专注海肠捞饭的专门店</strong>，品类空白是最大机会</li>
+<li>周边海鲜大排档多为传统蒸煮做法，缺乏"网红感"</li>
+<li>海肠捞饭在天津社交媒体热度高但线下专门店少——时机正好</li>
+</ul>
+</div>
+</div>
+
+<!-- 第18章：多店 -->
+<div class="section">
+<div class="section-title"><span class="num">18</span>多店规划</div>
+<div class="card">
+<h3>先做好一家店再说</h3>
+<p>40㎡小店做模型验证，跑通以下三个指标后再考虑第二家：</p>
+<ul>
+<li>月营收稳定在10万+</li>
+<li>大众点评评分4.5以上</li>
+<li>外卖月销1000+单</li>
+</ul>
+</div>
+</div>
+
+<!-- 第19章：执行 -->
+<div class="section">
+<div class="section-title"><span class="num">19</span>执行清单</div>
+<div class="card">
+<h3>开业前必做清单</h3>
+<ul>
+<li>✅ 铺设美团智能版收银系统（扫码点餐+会员+团购核销）</li>
+<li>✅ 大众点评完善店铺信息、上架团购</li>
+<li>✅ 制作围挡+DM单+台卡物料</li>
+<li>✅ 建立粉丝群（微信群）</li>
+<li>✅ 拍摄海肠捞饭短视频素材</li>
+<li>✅ 联系1-2位本地探店博主</li>
+<li>✅ 设置会员充值方案</li>
+</ul>
+</div>
+</div>
+
+<!-- 第20章：风险 -->
+<div class="section">
+<div class="section-title"><span class="num">20</span>风险控制</div>
+<div class="card">
+<h3>注意几个坑</h3>
+<ul>
+<li><strong>海鲜成本波动</strong>：海肠价格波动大，建议与2-3家供应商合作，锁定价格区间</li>
+<li><strong>出餐速度</strong>：40㎡厨房小，高峰期出餐压力大→提前备好海肠预处理，高峰期只做最后爆炒</li>
+<li><strong>差评应对</strong>：出现差评需24小时内回复，态度诚恳、给出补偿方案</li>
+</ul>
+</div>
+</div>
+
+<!-- 第21章：外卖 -->
+<div class="section">
+<div class="section-title"><span class="num">21</span>外卖运营</div>
+<div class="card">
+<h3>营业满1个月后上线外卖</h3>
+<ul>
+<li><strong>平台</strong>：美团外卖为主（与收银系统打通）</li>
+<li><strong>包装</strong>：海肠捞饭单独用密封餐盒，汤汁和饭分装，保证口感</li>
+<li><strong>满减</strong>：满50减5、满80减10</li>
+<li><strong>配送范围</strong>：北塘周边3公里</li>
+</ul>
+</div>
+</div>
+
+<!-- 第22章：SOP -->
+<div class="section">
+<div class="section-title"><span class="num">22</span>SOP标准流程</div>
+<div class="card">
+<h3>40㎡小店1-2人运转SOP</h3>
+<ul>
+<li><strong>开档（9:00）</strong>：海肠验收→清洗预处理→备料</li>
+<li><strong>午市（11:00-14:00）</strong>：扫码点餐→后厨爆炒→出餐→核销团购</li>
+<li><strong>午休（14:00-17:00）</strong>：备晚市料、清洁</li>
+<li><strong>晚市（17:00-21:00）</strong>：同上</li>
+<li><strong>收档（21:00-22:00）</strong>：结算、清洁、第二日备料</li>
+</ul>
+</div>
+</div>
+
+<!-- 第23章：低谷 -->
+<div class="section">
+<div class="section-title"><span class="num">23</span>淡季应对</div>
+<div class="card">
+<h3>海鲜也有淡旺季</h3>
+<ul>
+<li><strong>冬季淡季</strong>：推出"暖冬海鲜砂锅"系列，搭配海肠捞饭做套餐</li>
+<li><strong>工作日低谷</strong>：推工作日午餐套餐（海肠捞饭+饮品=48元），吸引周边上班族</li>
+<li><strong>下午茶时段</strong>：推"海鲜小食拼盘"，下午2-5点8折</li>
+</ul>
+</div>
+</div>
+
+<!-- 收银总结 -->
+<div class="section">
+<div class="section-title"><span class="num">💰</span>收银方案总结</div>
+<div class="card" style="background:#1a365d;color:#fff">
+<h3 style="color:#fff">美团智能版收银 · 郑姐海鲜专属方案</h3>
+<p style="color:rgba(255,255,255,0.8);font-size:13px;line-height:1.7">
+<strong style="color:#fff">① 扫码点餐</strong> — 客人扫码即点，省1个人工<br>
+<strong style="color:#fff">② 团购核销</strong> — 点评/抖音团券一键搞定<br>
+<strong style="color:#fff">③ 会员管理</strong> — 自动积分、发券、分析消费<br>
+<strong style="color:#fff">④ 经营报表</strong> — 数据化决策，每天卖啥一目了然<br>
+<strong style="color:#fff">⑤ 外卖接单</strong> — 美团外卖自动接单，厨房直接出票
+</p>
+</div>
+</div>
+
+</div>
+
+<footer class="footer">
+<div class="sign">方案出品：苏苏</div>
+<div class="date">2026年9月 · 美团餐饮系统</div>
+<div style="margin-top:8px;font-size:12px;color:#a0aec0">让每一家小店，都有数据支撑，都有 AI 辅助</div>
+</footer>
+</body>
+</html>
